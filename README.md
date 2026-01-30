@@ -4,6 +4,42 @@
 **Fecha:** 30/01/2026
 
 ---
+## Build utilizado
+
+```scala
+ThisBuild / version := "0.1.0-SNAPSHOT"
+ThisBuild / scalaVersion := "3.3.7"
+
+lazy val root = (project in file("."))
+  .settings(
+    name := "ExamenParcial2BIM2",
+
+    libraryDependencies ++= Seq(
+
+      // ===== Cats Effect (necesario para Doobie + FS2) =====
+      "org.typelevel" %% "cats-effect" % "3.5.4",
+
+      // ===== FS2 (streams y lectura de archivos) =====
+      "co.fs2" %% "fs2-core" % "3.12.2",
+      "co.fs2" %% "fs2-io"   % "3.12.2",
+
+      // ===== CSV =====
+      "org.gnieh" %% "fs2-data-csv" % "1.11.1",
+
+      // ===== DOOBIE =====
+      "org.tpolecat" %% "doobie-core"    % "1.0.0-RC11",
+      "org.tpolecat" %% "doobie-hikari" % "1.0.0-RC11",
+
+      // ===== ORACLE JDBC =====
+      "com.oracle.database.jdbc" % "ojdbc8" % "21.3.0.0",
+
+      // ===== LOGGING SIMPLE =====
+      "org.slf4j" % "slf4j-simple" % "2.0.16"
+    )
+  )
+
+```
+
 
 ## Codigo solucion en scala: 
  ```scala
