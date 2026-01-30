@@ -4,6 +4,24 @@
 **Fecha:** 30/01/2026
 
 ---
+## Case class utilizado
+
+```scala
+package model
+
+case class equipos(
+                  ID : Int
+                  , Equipo_Local: String
+                  , Equipo_Visitante: String
+                  , Fecha_Partido: String
+                  , Estadio: String
+                  , Goles_Local: Int
+                  , Goles_Visitante: Int
+                  , Partido_Jugado: Boolean
+                  )
+
+```
+
 ## Build utilizado
 
 ```scala
